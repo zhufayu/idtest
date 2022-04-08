@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dmall.distributedidtest.mapper.test01.WmOrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.dmall.distributedidtest.bean.WmOrderEntity">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="order_id" jdbcType="BIGINT" property="order_id"/>
+        <result column="sku_id" jdbcType="BIGINT" property="sku_id"/>
+        <result column="ware_name" jdbcType="VARCHAR" property="ware_name"/>
+        <result column="item_num" jdbcType="VARCHAR" property="item_num"/>
+        <result column="ware_num" jdbcType="INTEGER" property="ware_num"/>
+        <result column="ware_price" jdbcType="BIGINT" property="ware_price"/>
+        <result column="created" jdbcType="TIMESTAMP" property="created"/>
+        <result column="modified" jdbcType="TIMESTAMP" property="modified"/>
+        <result column="yn" jdbcType="BIT" property="yn"/>
+        <result column="wm_sku_id" jdbcType="BIT" property="wm_sku_id"/>
+        <result column="ware_id" jdbcType="SMALLINT" property="ware_id"/>
+        <result column="wm_ware_id" jdbcType="INTEGER" property="wm_ware_id"/>
+        <result column="matnr" jdbcType="DOUBLE" property="matnr"/>
+        <result column="offline_num" jdbcType="DECIMAL" property="offline_num"/>
+        <result column="webuser_id" jdbcType="CHAR" property="webuser_id"/>
+        <result column="coupon_code_amount" jdbcType="VARCHAR" property="coupon_code_amount"/>
+        <result column="catagory_id" jdbcType="LONGVARCHAR" property="catagory_id"/>
+        <result column="ware_tag" jdbcType="LONGVARCHAR" property="ware_tag"/>
+        <result column="ware_tag" jdbcType="LONGVARCHAR" property="ware_tag"/>
+        <result column="custom_tag" jdbcType="LONGVARCHAR" property="custom_tag"/>
+        <result column="matkl" jdbcType="BINARY" property="matkl"/>
+        <result column="blobtest" jdbcType="LONGVARBINARY" property="blobtest"/>
+        <result column="longblobtest" jdbcType="LONGVARBINARY" property="longblobtest"/>
+        <result column="datatest" jdbcType="DATE" property="datatest"/>
+        <result column="timetest" jdbcType="TIME" property="timetest"/>
+        <result column="yeartest" jdbcType="DATE" property="yeartest"/>
+        <result column="timestamptest" jdbcType="TIMESTAMP" property="timestamptest"/>
+        <result column="dmall_coupon_detail_new" jdbcType="OTHER" property="dmall_coupon_detail_new"/>
+        <!--        <result column="bianyrtest" jdbcType="BINARY" property="bianyrtest" />-->
+        <result column="offline_bar_code" jdbcType="VARBINARY" property="offline_bar_code"/>
+        <!--        <result column="offline_coupon_detail" jdbcType="BINARY" property="offline_coupon_detail" />-->
+        <!--        <result column="lucky_cut_detail" jdbcType="OTHER" property="lucky_cut_detail"/>-->
+        <!--        <result column="promotion_sub_type" jdbcType="CHAR" property="promotion_sub_type" />-->
+        <result column="ware_promotion_price" jdbcType="CHAR" property="ware_promotion_price"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">id,
+    order_id,sku_id,ware_name,item_num,ware_num,ware_price,created,modified,yn,wm_sku_id,
+    ware_id,wm_ware_id,matnr,ware_weight,offline_num,webuser_id,coupon_code_amount,catagory_id,
+    ware_tag,custom_tag,matkl,blobtest,meblob,longblobtest,datatest,timetest,yeartest,timestamptest
+    ,dmall_coupon_detail_new,offline_bar_code,ware_promotion_price
+  </sql>
+
+  <insert id="insert" parameterType="com.dmall.distributedidtest.bean.WmOrderEntity" useGeneratedKeys="true"
+            keyProperty="id">
+       INSERT INTO
+       		wm_order_ware_00
+       		(order_id,sku_id,ware_name,item_num,ware_num,ware_price,created,
+       		modified,yn,wm_sku_id,ware_id,wm_ware_id,matnr,ware_weight,
+       		offline_num,webuser_id,coupon_code_amount,catagory_id,ware_tag,custom_tag,
+       		matkl,blobtest,meblob,longblobtest,datatest,timetest,yeartest,timestamptest,
+       		dmall_coupon_detail_new,offline_bar_code,ware_promotion_price)
+       	VALUES
+       		(#{order_id}, #{sku_id}, #{ware_name},#{item_num}, #{ware_num}, #{ware_price}, #{created},
+       		#{modified}, #{yn},#{wm_sku_id},#{ware_id},#{wm_ware_id},#{matnr},#{ware_weight},
+       		#{offline_num}, #{webuser_id}, #{coupon_code_amount},#{catagory_id},#{ware_tag},#{custom_tag},
+       		#{matkl}, #{blobtest}, #{meblob}, #{longblobtest}, #{datatest}, #{timetest}, #{yeartest}, #{timestamptest},
+       		#{dmall_coupon_detail_new}, #{offline_bar_code}, #{ware_promotion_price})
+  </insert>
+
+    <insert id="insertList" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO
+        wm_order_ware_00
+        (order_id,sku_id,ware_name,item_num,ware_num,ware_price,created,
+        modified,yn,wm_sku_id,ware_id,wm_ware_id,matnr,ware_weight,
+        offline_num,webuser_id,coupon_code_amount,catagory_id,ware_tag,custom_tag
+        ,matkl,blobtest,meblob,longblobtest,datatest,timetest,yeartest,timestamptest
+        ,dmall_coupon_detail_new,offline_bar_code
+        ,ware_promotion_price)
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.order_id}, #{item.sku_id}, #{item.ware_name},#{item.item_num}, #{item.ware_num}, #{item.ware_price},
+            #{item.created},
+            #{item.modified}, #{item.yn},
+            #{item.wm_sku_id},#{item.ware_id},#{item.wm_ware_id},#{item.matnr},#{item.ware_weight},#{item.offline_num}
+            , #{item.webuser_id},
+            #{item.coupon_code_amount},#{item.catagory_id},#{item.ware_tag},#{item.custom_tag},#{item.matkl}
+            , #{item.blobtest,jdbcType=LONGVARBINARY}, #{item.meblob}, #{item.longblobtest,jdbcType=LONGVARBINARY}, #{item.datatest}, #{item.timetest},
+            #{item.yeartest}, #{item.timestamptest}
+            , #{item.dmall_coupon_detail_new}, #{item.offline_bar_code}, #{item.ware_promotion_price})
+        </foreach>
+    </insert>
+
+    <select id="selectByOrderId" parameterType="com.dmall.distributedidtest.bean.WmOrderEntity"
+            resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from wm_order_ware_00
+        <where>
+            1=1
+            <if test="order_id != null and order_id != ''">
+                and order_id = #{order_id,jdbcType=BIGINT}
+            </if>
+        </where>
+        order by ware_name
+    </select>
+
+    <update id="updateWmOrder" parameterType="com.dmall.distributedidtest.bean.WmOrderEntity">
+        update wm_order_ware_00
+        <set>
+            <if test="order_id != null">
+                order_id = #{order_id},
+            </if>
+            <if test="sku_id != null">
+                sku_id = #{sku_id},
+            </if>
+            <if test="ware_name != null">
+                ware_name = #{ware_name},
+            </if>
+            <if test="item_num != null">
+                item_num = #{item_num},
+            </if>
+            <if test="ware_num != null">
+                ware_num = #{ware_num},
+            </if>
+            <if test="ware_price != null">
+                ware_price = #{ware_price},
+            </if>
+            <if test="created != null">
+                created = #{created},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <delete id="delete" parameterType="java.lang.Long">
+        delete from wm_order_ware_00
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+
+    <select id="selectAllId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from wm_order_ware_00 wm
+    </select>
+    <insert id="insert$" parameterType="com.dmall.distributedidtest.bean.WmOrderEntity" useGeneratedKeys="true"
+            keyProperty="id">
+
+       INSERT INTO
+       		wm_order_ware_00
+       		(order_id,sku_id,ware_name,yn,wm_sku_id)
+       	VALUES
+       		(${order_id},${sku_id},${ware_name},${yn},${wm_sku_id})
+
+    </insert>
+
+
+</mapper>

@@ -1,0 +1,13 @@
+com/dmall/distributedidtest/bean/WmOrderEntity.class
+com/dmall/distributedidtest/datasource/DataSourceConfig1.class
+com/dmall/distributedidtest/bean/Location.class
+com/dmall/distributedidtest/mapper/test01/WmOrderMapper.class
+com/dmall/distributedidtest/controller/WmOrderController.class
+com/dmall/distributedidtest/util/Time.class
+com/dmall/distributedidtest/service/WmOrderService.class
+com/dmall/distributedidtest/Enum/Color.class
+com/dmall/distributedidtest/datasource/DataSourceConfig2.class
+com/dmall/distributedidtest/bean/JsonDemo.class
+com/dmall/distributedidtest/bean/JsonDemo2.class
+com/dmall/distributedidtest/DistributedidtestApplication.class
+com/dmall/distributedidtest/mapper/test02/OrderMapper.class

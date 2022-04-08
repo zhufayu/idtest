@@ -1,0 +1,9 @@
+DistributedIdTest.class
+TestAdmiralConfig.class
+InsertSql/ExcuteSql.class
+InsertSql/GEOTest.class
+RegTest.class
+util/HttpClientUtil.class
+InsertSql/MultiSqlTest.class
+util/RandomTest.class
+InsertSql/InterSqlTest.class

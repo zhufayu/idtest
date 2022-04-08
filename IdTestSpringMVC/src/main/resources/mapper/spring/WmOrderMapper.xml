@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 设置为IUserDao接口方法提供sql语句配置 -->
+<mapper namespace="com.dmall.Dao.WmOrderMapper">
+
+
+<!--	   正则匹配[0-9a-zA-Z_]{1,}$. 匹配 wm_order_ware_00-->
+	<insert id="insert" parameterType="com.dmall.bean.WmOrderEntity" useGeneratedKeys="true" keyProperty="id">
+
+        INSERT INTO
+       		wm_order_ware_00
+       		(order_id,sku_id,ware_name,item_num,ware_num,ware_price,created,
+       		modified,yn,wm_sku_id,ware_id,wm_ware_id,matnr,ware_weight,
+       		offline_num,webuser_id,coupon_code_amount,catagory_id,ware_tag,custom_tag
+       		,matkl,blobtest,meblob,longblobtest,datatest,timetest,yeartest,timestamptest
+       		,dmall_coupon_detail_new,bianyrtest,offline_bar_code,promotion_sub_type
+       		,ware_promotion_price)
+       	VALUES
+       		(#{order_id}, #{sku_id}, #{ware_name},#{item_num}, #{ware_num}, #{ware_price}, #{created},
+       		#{modified}, #{yn}, #{wm_sku_id},#{ware_id},#{wm_ware_id},#{matnr},#{ware_weight},#{offline_num}
+       		, #{webuser_id}, #{coupon_code_amount},#{catagory_id},#{ware_tag},#{custom_tag},#{matkl}
+       		, #{blobtest}, #{meblob}, #{longblobtest}, #{datatest}, #{timetest}, #{yeartest}, #{timestamptest}
+       		, #{dmall_coupon_detail_new}, #{bianyrtest}, #{offline_bar_code}, #{promotion_sub_type}, #{ware_promotion_price})
+
+</insert>
+
+	<insert id="insertList" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id" >
+		INSERT INTO
+		wm_order_ware_00
+		(order_id,sku_id,ware_name,item_num,ware_num,ware_price,created,
+		modified,yn,wm_sku_id,ware_id,wm_ware_id,matnr,ware_weight,
+		offline_num,webuser_id,coupon_code_amount,catagory_id,ware_tag,custom_tag
+		,matkl,blobtest,meblob,longblobtest,datatest,timetest,yeartest,timestamptest
+		,dmall_coupon_detail_new,offline_bar_code
+		,ware_promotion_price)
+		VALUES
+		<foreach collection="list" item="item" index="index" separator=",">
+			(#{item.order_id}, #{item.sku_id}, #{item.ware_name},#{item.item_num}, #{item.ware_num}, #{item.ware_price}, #{item.created},
+			#{item.modified}, #{item.yn}, #{item.wm_sku_id},#{item.ware_id},#{item.wm_ware_id},#{item.matnr},#{item.ware_weight},#{item.offline_num}
+			, #{item.webuser_id}, #{item.coupon_code_amount},#{item.catagory_id},#{item.ware_tag},#{item.custom_tag},#{item.matkl}
+			, #{item.blobtest}, #{item.meblob}, #{item.longblobtest}, #{item.datatest}, #{item.timetest}, #{item.yeartest}, #{item.timestamptest}
+			, #{item.dmall_coupon_detail_new}, #{item.offline_bar_code}, #{item.ware_promotion_price})
+		</foreach>
+	</insert>
+
+<!--   正则匹配[A-Z]+$ 匹配 TYBNMKVNJ-->
+	<!--	<insert id="insert" parameterType="com.dmall.bean.WmOrderEntity" useGeneratedKeys="true" keyProperty="id">-->
+<!--        INSERT INTO-->
+<!--       		HKKNBCGGVY-->
+<!--       		(order_id,sku_id,ware_name,item_num,ware_num,ware_price,created,-->
+<!--       		modified,yn,wm_sku_id,ware_id,wm_ware_id,matnr,ware_weight,-->
+<!--       		offline_num,webuser_id,coupon_code_amount,catagory_id,ware_tag,custom_tag-->
+<!--       		,matkl,blobtest,meblob,longblobtest,datatest,timetest,yeartest,timestamptest-->
+<!--       		,dmall_coupon_detail_new,bianyrtest,offline_bar_code,promotion_sub_type-->
+<!--       		,ware_promotion_price)-->
+<!--       	VALUES-->
+<!--       		(#{order_id}, #{sku_id}, #{ware_name},#{item_num}, #{ware_num}, #{ware_price}, #{created},-->
+<!--       		#{modified}, #{yn}, #{wm_sku_id},#{ware_id},#{wm_ware_id},#{matnr},#{ware_weight},#{offline_num}-->
+<!--       		, #{webuser_id}, #{coupon_code_amount},#{catagory_id},#{ware_tag},#{custom_tag},#{matkl}-->
+<!--       		, #{blobtest}, #{meblob}, #{longblobtest}, #{datatest}, #{timetest}, #{yeartest}, #{timestamptest}-->
+<!--       		, #{dmall_coupon_detail_new}, #{bianyrtest}, #{offline_bar_code}, #{promotion_sub_type}, #{ware_promotion_price})-->
+
+
+<!--	</insert>-->
+<!--   小写字母匹配 bdhbcdvh-->
+
+<!--	<insert id="insert" parameterType="com.dmall.bean.WmOrderEntity" useGeneratedKeys="true" keyProperty="id">-->
+<!--        INSERT INTO-->
+<!--	bdhbcdvh-->
+<!--       		(order_id,sku_id,ware_name,item_num,ware_num,ware_price,created,-->
+<!--       		modified,yn,wm_sku_id,ware_id,wm_ware_id,matnr,ware_weight,-->
+<!--       		offline_num,webuser_id,coupon_code_amount,catagory_id,ware_tag,custom_tag-->
+<!--       		,matkl,blobtest,meblob,longblobtest,datatest,timetest,yeartest,timestamptest-->
+<!--       		,dmall_coupon_detail_new,bianyrtest,offline_bar_code,promotion_sub_type-->
+<!--       		,ware_promotion_price)-->
+<!--       	VALUES-->
+<!--       		(#{order_id}, #{sku_id}, #{ware_name},#{item_num}, #{ware_num}, #{ware_price}, #{created},-->
+<!--       		#{modified}, #{yn}, #{wm_sku_id},#{ware_id},#{wm_ware_id},#{matnr},#{ware_weight},#{offline_num}-->
+<!--       		, #{webuser_id}, #{coupon_code_amount},#{catagory_id},#{ware_tag},#{custom_tag},#{matkl}-->
+<!--       		, #{blobtest}, #{meblob}, #{longblobtest}, #{datatest}, #{timetest}, #{yeartest}, #{timestamptest}-->
+<!--       		, #{dmall_coupon_detail_new}, #{bianyrtest}, #{offline_bar_code}, #{promotion_sub_type}, #{ware_promotion_price})-->
+
+
+<!--	</insert>-->
+
+
+
+<!--&lt;!&ndash;   数字&ndash;&gt;-->
+<!--	<insert id="insert" parameterType="com.dmall.bean.WmOrderEntity" useGeneratedKeys="true" keyProperty="id">-->
+<!--        INSERT INTO-->
+<!--	123476500-->
+<!--       		(order_id,sku_id,ware_name,item_num,ware_num,ware_price,created,-->
+<!--       		modified,yn,wm_sku_id,ware_id,wm_ware_id,matnr,ware_weight,-->
+<!--       		offline_num,webuser_id,coupon_code_amount,catagory_id,ware_tag,custom_tag-->
+<!--       		,matkl,blobtest,meblob,longblobtest,datatest,timetest,yeartest,timestamptest-->
+<!--       		,dmall_coupon_detail_new,bianyrtest,offline_bar_code,promotion_sub_type-->
+<!--       		,ware_promotion_price)-->
+<!--       	VALUES-->
+<!--       		(#{order_id}, #{sku_id}, #{ware_name},#{item_num}, #{ware_num}, #{ware_price}, #{created},-->
+<!--       		#{modified}, #{yn}, #{wm_sku_id},#{ware_id},#{wm_ware_id},#{matnr},#{ware_weight},#{offline_num}-->
+<!--       		, #{webuser_id}, #{coupon_code_amount},#{catagory_id},#{ware_tag},#{custom_tag},#{matkl}-->
+<!--       		, #{blobtest}, #{meblob}, #{longblobtest}, #{datatest}, #{timetest}, #{yeartest}, #{timestamptest}-->
+<!--       		, #{dmall_coupon_detail_new}, #{bianyrtest}, #{offline_bar_code}, #{promotion_sub_type}, #{ware_promotion_price})-->
+
+
+<!--	</insert>-->
+<!--   匹配数字字母-->
+
+<!--		<insert id="insert" parameterType="com.dmall.bean.WmOrderEntity" useGeneratedKeys="true" keyProperty="id">-->
+<!--	        INSERT INTO-->
+<!--		bdh476573-->
+<!--	       		(order_id,sku_id,ware_name,item_num,ware_num,ware_price,created,-->
+<!--	       		modified,yn,wm_sku_id,ware_id,wm_ware_id,matnr,ware_weight,-->
+<!--	       		offline_num,webuser_id,coupon_code_amount,catagory_id,ware_tag,custom_tag-->
+<!--	       		,matkl,blobtest,meblob,longblobtest,datatest,timetest,yeartest,timestamptest-->
+<!--	       		,dmall_coupon_detail_new,bianyrtest,offline_bar_code,promotion_sub_type-->
+<!--	       		,ware_promotion_price)-->
+<!--	       	VALUES-->
+<!--	       		(#{order_id}, #{sku_id}, #{ware_name},#{item_num}, #{ware_num}, #{ware_price}, #{created},-->
+<!--	       		#{modified}, #{yn}, #{wm_sku_id},#{ware_id},#{wm_ware_id},#{matnr},#{ware_weight},#{offline_num}-->
+<!--	       		, #{webuser_id}, #{coupon_code_amount},#{catagory_id},#{ware_tag},#{custom_tag},#{matkl}-->
+<!--	       		, #{blobtest}, #{meblob}, #{longblobtest}, #{datatest}, #{timetest}, #{yeartest}, #{timestamptest}-->
+<!--	       		, #{dmall_coupon_detail_new}, #{bianyrtest}, #{offline_bar_code}, #{promotion_sub_type}, #{ware_promotion_price})-->
+
+
+<!--		</insert>-->
+
+	<select id="selectId" parameterType="java.lang.Long" resultType="com.dmall.bean.WmOrderEntity">
+		select * from wm_order_ware_00 wm where order_id = #{order_id,jdbcType=BIGINT}
+	</select>
+
+
+</mapper>

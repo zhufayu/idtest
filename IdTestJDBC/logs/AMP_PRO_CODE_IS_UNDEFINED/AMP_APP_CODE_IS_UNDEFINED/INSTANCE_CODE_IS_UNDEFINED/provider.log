@@ -1,0 +1,231 @@
+[INFO ] 2021-10-21 18:11:06.888 [main] [com.dmall.admiral.client.spring.AdmiralPlaceholderConfigurer] [] -
+                ##### Initializing AdmiralPlaceholderConfigurer {} has started...
+[INFO ] 2021-10-21 18:11:06.903 [main] [com.dmall.admiral.client.ContextRegistry] [] -
+                ##### Application [pulsar-bp-id-test]'s context has been registered successfully.
+[INFO ] 2021-10-21 18:11:06.904 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                Current launching mode : remote
+[INFO ] 2021-10-21 18:11:07.162 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                ###### The URL for getting server nodes : http://meta.admiral.dmall.com/get_server_nodes
+[INFO ] 2021-10-21 18:11:07.162 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                ###### Resolved address : 10.248.224.123, contains port : false
+[INFO ] 2021-10-21 18:11:07.433 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                Fetched admiral server list: 
+{
+	"body":{
+		"clusterNodes":[{
+			"dataCenter":"IDC",
+			"identifier":"10.248.224.123:9527",
+			"ip":"10.248.224.123",
+			"port":9527
+		}],
+		"optimalConnectNodes":[{
+			"dataCenter":"IDC",
+			"identifier":"10.248.224.123:9527",
+			"ip":"10.248.224.123",
+			"port":9527
+		}]
+	},
+	"code":200,
+	"header":{
+		"params":{},
+		"requestId":"9d9484d5-b805-4f99-9604-67ef879a9684",
+		"sendMessageTime":1634811067219
+	},
+	"messageType":"GET_SERVER_NODES",
+	"version":"1.0"
+}
+[INFO ] 2021-10-21 18:11:07.469 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                ##### URL for getting initialized configuration : http://10.248.224.123:8527/get_config, resolved address : 10.248.224.123
+[INFO ] 2021-10-21 18:11:07.586 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                Retrieve initialized configuration from admiral server: 
+{
+	"body":{
+		"pulsar-bp-id-test":{
+			"dynamicConfigItems":[],
+			"staticConfigItems":[{
+				"appName":"pulsar-bp-id-test",
+				"configKey":"db.jdbc.pulsar",
+				"configType":"static",
+				"configValue":"[\n  {\n    \"db_name\": \"BpIdTest\",\n    \"inject_tables\": \".*\",\n    \"inject_ids\": {\n      \"dis_id_table\": \"id\"\n    }\n  },\n  {\n    \"db_name\": \"BpTestDb\",\n    \"inject_tables\": \".*\",\n    \"inject_ids\": {\n      \"dis_id_table\": \"id\"\n    }\n  }\n]",
+				"defaultVersion":23,
+				"identifier":"DEV#IDC#pulsar-bp-id-test#db.jdbc.pulsar",
+				"instanceVersion":0,
+				"scope":"DEV#IDC",
+				"static":true,
+				"version":"23.0"
+			}]
+		}
+	},
+	"code":200,
+	"header":{
+		"params":{},
+		"requestId":"961ae2d3-0956-4af6-b82b-5e2eebb8927d",
+		"sendMessageTime":1634811067519
+	},
+	"messageType":"GET_INIT_CONFIG_DATA",
+	"version":"1.0"
+}
+[INFO ] 2021-10-21 18:11:07.596 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                ##### Loading results : server node list - true, remote configurations - true, local cache - false, property files - false
+ All properties loaded here are : 
+{
+	"db.jdbc.pulsar":"[\n  {\n    \"db_name\": \"BpIdTest\",\n    \"inject_tables\": \".*\",\n    \"inject_ids\": {\n      \"dis_id_table\": \"id\"\n    }\n  },\n  {\n    \"db_name\": \"BpTestDb\",\n    \"inject_tables\": \".*\",\n    \"inject_ids\": {\n      \"dis_id_table\": \"id\"\n    }\n  }\n]"
+}
+[INFO ] 2021-10-21 18:11:07.597 [main] [com.dmall.admiral.client.buildin.BuildinResourceManager] [] -
+                Intialized build-in resources manager.
+[INFO ] 2021-10-21 18:11:07.597 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                ##### Admiral client context has been initialed. AdmiralClientContext [appName=pulsar-bp-id-test, env=DEV, isInitialized=true, isClosed=false, launchMode=REMOTE, disableDynamicPush=true]
+[INFO ] 2021-10-21 18:13:02.398 [main] [com.dmall.admiral.client.spring.AdmiralPlaceholderConfigurer] [] -
+                ##### Initializing AdmiralPlaceholderConfigurer {} has started...
+[INFO ] 2021-10-21 18:13:02.405 [main] [com.dmall.admiral.client.ContextRegistry] [] -
+                ##### Application [pulsar-bp-id-test]'s context has been registered successfully.
+[INFO ] 2021-10-21 18:13:02.406 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                Current launching mode : remote
+[INFO ] 2021-10-21 18:13:02.695 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                ###### The URL for getting server nodes : http://meta.admiral.dmall.com/get_server_nodes
+[INFO ] 2021-10-21 18:13:02.695 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                ###### Resolved address : 10.248.224.123, contains port : false
+[INFO ] 2021-10-21 18:13:02.982 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                Fetched admiral server list: 
+{
+	"body":{
+		"clusterNodes":[{
+			"dataCenter":"IDC",
+			"identifier":"10.248.224.123:9527",
+			"ip":"10.248.224.123",
+			"port":9527
+		}],
+		"optimalConnectNodes":[{
+			"dataCenter":"IDC",
+			"identifier":"10.248.224.123:9527",
+			"ip":"10.248.224.123",
+			"port":9527
+		}]
+	},
+	"code":200,
+	"header":{
+		"params":{},
+		"requestId":"f9db8162-7c55-437a-a7a7-c001ea8aeeaf",
+		"sendMessageTime":1634811182754
+	},
+	"messageType":"GET_SERVER_NODES",
+	"version":"1.0"
+}
+[INFO ] 2021-10-21 18:13:03.012 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                ##### URL for getting initialized configuration : http://10.248.224.123:8527/get_config, resolved address : 10.248.224.123
+[INFO ] 2021-10-21 18:13:03.187 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                Retrieve initialized configuration from admiral server: 
+{
+	"body":{
+		"pulsar-bp-id-test":{
+			"dynamicConfigItems":[],
+			"staticConfigItems":[{
+				"appName":"pulsar-bp-id-test",
+				"configKey":"db.jdbc.pulsar",
+				"configType":"static",
+				"configValue":"[\n  {\n    \"db_name\": \"BpIdTest\",\n    \"inject_tables\": \".*\",\n    \"inject_ids\": {\n      \"dis_id_table\": \"id\"\n    }\n  },\n  {\n    \"db_name\": \"BpTestDb\",\n    \"inject_tables\": \".*\",\n    \"inject_ids\": {\n      \"dis_id_table\": \"id\"\n    }\n  }\n]",
+				"defaultVersion":23,
+				"identifier":"DEV#IDC#pulsar-bp-id-test#db.jdbc.pulsar",
+				"instanceVersion":0,
+				"scope":"DEV#IDC",
+				"static":true,
+				"version":"23.0"
+			}]
+		}
+	},
+	"code":200,
+	"header":{
+		"params":{},
+		"requestId":"ba8d741f-50eb-475f-a877-b51b72acd086",
+		"sendMessageTime":1634811183063
+	},
+	"messageType":"GET_INIT_CONFIG_DATA",
+	"version":"1.0"
+}
+[INFO ] 2021-10-21 18:13:03.206 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                ##### Loading results : server node list - true, remote configurations - true, local cache - false, property files - false
+ All properties loaded here are : 
+{
+	"db.jdbc.pulsar":"[\n  {\n    \"db_name\": \"BpIdTest\",\n    \"inject_tables\": \".*\",\n    \"inject_ids\": {\n      \"dis_id_table\": \"id\"\n    }\n  },\n  {\n    \"db_name\": \"BpTestDb\",\n    \"inject_tables\": \".*\",\n    \"inject_ids\": {\n      \"dis_id_table\": \"id\"\n    }\n  }\n]"
+}
+[INFO ] 2021-10-21 18:13:03.207 [main] [com.dmall.admiral.client.buildin.BuildinResourceManager] [] -
+                Intialized build-in resources manager.
+[INFO ] 2021-10-21 18:13:03.208 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                ##### Admiral client context has been initialed. AdmiralClientContext [appName=pulsar-bp-id-test, env=DEV, isInitialized=true, isClosed=false, launchMode=REMOTE, disableDynamicPush=true]
+[INFO ] 2021-10-21 18:16:02.991 [main] [com.dmall.admiral.client.spring.AdmiralPlaceholderConfigurer] [] -
+                ##### Initializing AdmiralPlaceholderConfigurer {} has started...
+[INFO ] 2021-10-21 18:16:02.998 [main] [com.dmall.admiral.client.ContextRegistry] [] -
+                ##### Application [pulsar-bp-id-test]'s context has been registered successfully.
+[INFO ] 2021-10-21 18:16:02.999 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                Current launching mode : remote
+[INFO ] 2021-10-21 18:16:03.261 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                ###### The URL for getting server nodes : http://meta.admiral.dmall.com/get_server_nodes
+[INFO ] 2021-10-21 18:16:03.261 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                ###### Resolved address : 10.248.224.123, contains port : false
+[INFO ] 2021-10-21 18:16:03.533 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                Fetched admiral server list: 
+{
+	"body":{
+		"clusterNodes":[{
+			"dataCenter":"IDC",
+			"identifier":"10.248.224.123:9527",
+			"ip":"10.248.224.123",
+			"port":9527
+		}],
+		"optimalConnectNodes":[{
+			"dataCenter":"IDC",
+			"identifier":"10.248.224.123:9527",
+			"ip":"10.248.224.123",
+			"port":9527
+		}]
+	},
+	"code":200,
+	"header":{
+		"params":{},
+		"requestId":"802db354-2198-48e2-a912-8a4cf3103d2f",
+		"sendMessageTime":1634811363319
+	},
+	"messageType":"GET_SERVER_NODES",
+	"version":"1.0"
+}
+[INFO ] 2021-10-21 18:16:03.563 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                ##### URL for getting initialized configuration : http://10.248.224.123:8527/get_config, resolved address : 10.248.224.123
+[INFO ] 2021-10-21 18:16:03.639 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                Retrieve initialized configuration from admiral server: 
+{
+	"body":{
+		"pulsar-bp-id-test":{
+			"dynamicConfigItems":[],
+			"staticConfigItems":[{
+				"appName":"pulsar-bp-id-test",
+				"configKey":"db.jdbc.pulsar",
+				"configType":"static",
+				"configValue":"[\n  {\n    \"db_name\": \"BpIdTest\",\n    \"inject_tables\": \".*\",\n    \"inject_ids\": {\n      \"dis_id_table\": \"id\"\n    }\n  },\n  {\n    \"db_name\": \"BpTestDb\",\n    \"inject_tables\": \".*\",\n    \"inject_ids\": {\n      \"dis_id_table\": \"id\"\n    }\n  }\n]",
+				"defaultVersion":23,
+				"identifier":"DEV#IDC#pulsar-bp-id-test#db.jdbc.pulsar",
+				"instanceVersion":0,
+				"scope":"DEV#IDC",
+				"static":true,
+				"version":"23.0"
+			}]
+		}
+	},
+	"code":200,
+	"header":{
+		"params":{},
+		"requestId":"7f3924d5-a5f1-4495-9590-c6bce595829b",
+		"sendMessageTime":1634811363614
+	},
+	"messageType":"GET_INIT_CONFIG_DATA",
+	"version":"1.0"
+}
+[INFO ] 2021-10-21 18:16:03.648 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                ##### Loading results : server node list - true, remote configurations - true, local cache - false, property files - false
+ All properties loaded here are : 
+{
+	"db.jdbc.pulsar":"[\n  {\n    \"db_name\": \"BpIdTest\",\n    \"inject_tables\": \".*\",\n    \"inject_ids\": {\n      \"dis_id_table\": \"id\"\n    }\n  },\n  {\n    \"db_name\": \"BpTestDb\",\n    \"inject_tables\": \".*\",\n    \"inject_ids\": {\n      \"dis_id_table\": \"id\"\n    }\n  }\n]"
+}
+[INFO ] 2021-10-21 18:16:03.649 [main] [com.dmall.admiral.client.buildin.BuildinResourceManager] [] -
+                Intialized build-in resources manager.
+[INFO ] 2021-10-21 18:16:03.649 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                ##### Admiral client context has been initialed. AdmiralClientContext [appName=pulsar-bp-id-test, env=DEV, isInitialized=true, isClosed=false, launchMode=REMOTE, disableDynamicPush=true]

@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    first:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://10.248.224.3:11204/BpTestDb?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false&rewriteBatchedStatements=true
+      username: dmall_inf
+      password: 369JsZzKs8vu415
+    second:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://10.248.224.12:26102/BpIdTest?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false&rewriteBatchedStatements=true
+      username: dmall_inf
+      password: 369JsZzKs8vu415
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+
+logging:
+   level:
+     root: info
+
+   file:
+      path: /Users/beiping/Downloads/idtest-master/IdTestDemo2/src/main/log
+
+server:
+   port: 8081
+
+dmall:
+  admiral:
+    enabled: true
+    appName: dbatest2-bp-test-db
+    appKey: 0F2C34601711B11319B7D234A737045D445A8823864099E27ACFC984DF9D8B2B
+    secretKey: 3fe144ec98ccad9c9f5d0c5b
+
+

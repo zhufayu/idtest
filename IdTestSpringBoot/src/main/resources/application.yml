@@ -1,0 +1,33 @@
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+spring:
+  datasource:
+    test1:
+      username: dmall_inf
+      password: 369JsZzKs8vu415
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://10.248.224.145:11204/BpIdTest?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false&serverTimezone=Asia/Shanghai&allowMutiQueries=true
+    test2:
+      username: dmall_inf
+      password: 369JsZzKs8vu415
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://10.248.224.12:26102/BpIdTest?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false
+
+logging:
+   level:
+     root: info
+
+   file:
+      path: /Users/beiping/Downloads/idtest-master/IdTestDemo2/src/main/log
+
+server:
+   port: 8081
+
+#dmall:
+#  admiral:
+#    enabled: true
+#    appName: pulsar-bp-id-test
+#    appKey: EBD0C21A8A75086D65566BB56123AD1C103DA68D9061732D6897A426AFCE037D
+#    secretKey: b57a4be3a912e38a2f5693f1

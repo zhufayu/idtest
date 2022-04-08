@@ -1,0 +1,204 @@
+[INFO ] 2021-10-29 16:05:23.298 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                The argument in command line - com.dmall.zone's value is gz01
+[INFO ] 2021-10-29 16:05:23.306 [main] [com.dmall.admiral.client.ContextRegistry] [] -
+                ##### Application [mid-cloud-test-admiral]'s context has been registered successfully.
+[INFO ] 2021-10-29 16:05:23.470 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                ##### Admiral client version: 3.1.2
+[INFO ] 2021-10-29 16:05:23.471 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                Current launching mode : remote
+[INFO ] 2021-10-29 16:05:23.818 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                Admiral Server Health check, ResponseMessage:{"admiral-server-env":"mid","health":"OK"}
+[INFO ] 2021-10-29 16:05:23.820 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                ##### The URL for getting server nodes : http://mid-admiral.server.api.dmall.com/get_server_nodes
+[INFO ] 2021-10-29 16:05:23.859 [main] [com.dmall.admiral.client.config.prop.AdmiralPropertyHolder] [] -
+                Start to load properties from remote server
+[INFO ] 2021-10-29 16:05:23.862 [main] [com.dmall.admiral.client.net.AdmiralClientInstanceId] [] -
+                ##### Admiral client instanceID: 10.12.205.132:3274520
+[INFO ] 2021-10-29 16:05:23.862 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                ##### URL for getting initialized configuration : http://mid-admiral.server.api.dmall.com/get_config
+[INFO ] 2021-10-29 16:05:24.150 [main] [com.dmall.admiral.client.config.prop.LocalPropertyHolder] [] -
+                ##### Loading properties local.properties ...
+[ERROR] 2021-10-29 16:05:24.152 [main] [com.dmall.admiral.client.config.prop.LocalPropertyHolder] [] -
+                Even through you specified this file [local.properties], we can not load this file, ignore it pls.
+java.lang.NullPointerException: null
+	at com.dmall.admiral.client.config.prop.LocalPropertyHolder.loadFromLocal(LocalPropertyHolder.java:97)
+	at com.dmall.admiral.client.AdmiralClientContext.init(AdmiralClientContext.java:184)
+	at com.dmall.admiral.client.AdmiralClientContext$Builder.startUp(AdmiralClientContext.java:612)
+	at DistributedIdTest.main(DistributedIdTest.java:152)
+[INFO ] 2021-10-29 16:05:24.153 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                Load properties from local file, and the successful of loading result is true 
+[INFO ] 2021-10-29 16:05:24.153 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                All Loading Remote Properties Are Here:
+ Dynamic Properties: 
+{
+	"__global_admira_test":"__global_admira_test_001065",
+	"__infra.zone.vendorId.mapping":"{\"1\":\"gz01\"}",
+	"app_dynamic_key":"app_dynamic_keyvalue_001008",
+	"dmg.influxdb.url":"http://10.40.34.13:8086",
+	"influxdb.logDb.pwd":"!QAZxsw2",
+	"local_dynamic_pro":"app-local_dynamic_pro-value",
+	"sysy_dydy_dy01":"sysy_dydy_dy"
+},
+Static Properties: 
+{
+	"__erp.cookie.aes.key":"Adv3fRg7JhKh3d0A",
+	"__erp.domain.name":"miderp.dmall.com.cn",
+	"__infra.ddc.server.addr":"midamp.ddc.dmall.com",
+	"__infra.dmc.server.addr":"http://midds.dmc.api.inner-dmall.com/",
+	"__infra.dmg.server.addr":"midamp.dmg.dmall.com:8018",
+	"__infra.dsf.add":"zookeeper://10.248.224.136:2181",
+	"__infra.dsf.config.addr":"zookeeper://midzk1.dmall.com:2181?backup=midzk2.dmall.com:2181",
+	"__infra.dsf.meta.addr":"zookeeper://midzk1.dmall.com:2181?backup=midzk2.dmall.com:2181",
+	"__infra.dsf.registry.addr":"zookeeper://midzk1.dmall.com:2181?backup=midzk2.dmall.com:2181",
+	"__infra.dsf.zookeeper.addr":"midzk1.dmall.com:2181",
+	"__infra.pulsar.zone.id":"{\"gz01\":1,\"rz01\":2,\"rz02\":3,\"version\":1}",
+	"__infra.zone.vendorId.mappingxx":"111",
+	"__mid.app.code":"admiral-test",
+	"__mid.app.secret.key":"BFA88CD8-1BDC-4A11-8E8A-161E121F2477",
+	"__mid.project.code":"mid-cloud-test",
+	"__sso.common.secret.key":"8d623ea4b041072f98e9c17b6ae2158e",
+	"__sso.cookie.domain":"dmall.com",
+	"__sso.cookie.name":"__token_",
+	"__sso.origin.reg":".*\\.dmall\\.com",
+	"__sso.partner.public.key":"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCNGdSNUj5oX0GF6XSpsbqTZrC9vyGrNf8lDO0pHPNhSLchztb5qRH6x6k3cZgy9q3lD8DzWqz8ynlzLB1VdCB/XKocCVxTNew4wuEoY0Fs0W1glOyWVHA9he28CRGS/5OrJjNRdyYuLuA4X+4UMtP4TyWQydOa31N6Tnmi4vQ46wIDAQAB",
+	"__sso.server.domain":"midmansso.dmall.com",
+	"__sso.sign.key":"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJQ+GEKFq8gjKI+hdifKoAe5Dhtkfjoqe/9nkbdcvpRwuXbnPJGiJqoTRGCB5ypDpM4+Z0E4bjedrN/o7s00KZB2/YWepDMufDQeZ9RK9Q71RJLkSwZWZ5fbMH+/dKsrXbMCwEtsg9EKhmKe/6jSkYEeeBJO/jaFjedhbyB9e9qwIDAQAB",
+	"__sso.vender.cookie.name":"mid_dmall_vender",
+	"db.jdbc.pulsar":"[\n  {\n    \"db_name\": \"BpIdTest\",\n    \"inject_tables\": \".*\",\n    \"inject_ids\": {\n      \"dis_id_table\": \"id\"\n    }\n  },\n  {\n    \"db_name\": \"BpTestDb\",\n    \"inject_tables\": \".*\",\n    \"inject_ids\": {\n      \"dis_id_table\": \"id\"\n    }\n  }\n]",
+	"kgkkk":"",
+	"local_pro":"app-local_pro-vlaue",
+	"nnnn":"kkkkkk  ",
+	"static_username":"app-static_username-value",
+	"sy-dy-dy":"sy-dy-dy",
+	"sysy_dy":"kkkdy",
+	"sysy_dydy_dy":"test01",
+	"sysysysysysy":"sysysysysysy"
+}
+[INFO ] 2021-10-29 16:05:24.175 [main] [com.dmall.admiral.client.net.netty.ConnectionManager] [] -
+                The options of admiral client bootstrap : {connectTimeoutMillis=10000, connectionTimeoutMillis=10000, keepAlive=true}
+[INFO ] 2021-10-29 16:05:24.176 [Admiral connected watcher] [com.dmall.admiral.client.AdmiralClientContext$WatchConnectedTask] [] -
+                Admiral client mid-cloud-test-admiral watch connected Task com.dmall.admiral.client.AdmiralClientContext$WatchConnectedTask@2284df44 start
+[INFO ] 2021-10-29 16:05:24.176 [Admiral connected watcher] [com.dmall.admiral.client.net.netty.ConnectionManager] [] -
+                Start to connect admiral server for app [mid-cloud-test-admiral]
+[INFO ] 2021-10-29 16:05:24.176 [Admiral connected watcher] [com.dmall.admiral.client.net.netty.ConnectionManager] [] -
+                Selected admiral server is /10.248.225.41:9527, ready to connect it.
+[INFO ] 2021-10-29 16:05:24.177 [main] [com.dmall.admiral.client.config.manage.GlobalObjectManagerRefs] [] -
+                Start to add a weak reference of object manager [managedObjectsMap={}] into the global reference.
+[INFO ] 2021-10-29 16:05:24.178 [main] [com.dmall.admiral.client.config.manage.GlobalObjectManagerRefs] [] -
+                Add a weak reference of [managedObjectsMap={}] into the global reference sucessfully.
+[INFO ] 2021-10-29 16:05:24.179 [main] [com.dmall.admiral.client.buildin.BuildinResourceManager] [] -
+                Intialized build-in resources manager.
+[INFO ] 2021-10-29 16:05:24.179 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                ##### Admiral client context 10.12.205.132:3274520mid-cloud-test-admiral has been initialized. AdmiralClientContext [appName=mid-cloud-test-admiral, group=null, isInitialized=true, isClosed=false, launchMode=REMOTE, disableDynamicPush=false]
+[INFO ] 2021-10-29 16:05:24.242 [New I/O client worker #1-1] [com.dmall.admiral.client.net.netty.ConnectionManager$2] [] -
+                Connect admiral server successfully, channel is [id: 0x5738e0a8, /10.12.205.132:52578 => /10.248.225.41:9527]
+[INFO ] 2021-10-29 16:05:24.242 [New I/O client worker #1-1] [com.dmall.admiral.client.net.netty.ConnectionManager] [] -
+                Connected with channel: [id: 0x5738e0a8, /10.12.205.132:52578 => /10.248.225.41:9527]
+[INFO ] 2021-10-29 16:05:24.294 [New I/O client worker #1-1] [com.dmall.admiral.client.config.AdmiralConfigHandler] [] -
+                Received message from server: AdmiralMessage [header=Header [ clientId=null, requestId=7dcf27c2-0c0c-40b9-840a-b3835f913884, params={}], body="register to server success!", code=200, messageType=REQUEST_RESPONSE]
+[INFO ] 2021-10-29 16:05:24.295 [New I/O client worker #1-1] [com.dmall.admiral.client.net.netty.ConnectionManager] [] -
+                Start adding a idle timer
+[INFO ] 2021-10-29 16:05:44.177 [Admiral connected watcher] [com.dmall.admiral.client.AdmiralClientContext$WatchConnectedTask] [] -
+                Admiral client mid-cloud-test-admiral watch connected Task com.dmall.admiral.client.AdmiralClientContext$WatchConnectedTask@2284df44 start
+[INFO ] 2021-10-29 16:06:45.971 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                The argument in command line - com.dmall.zone's value is gz01
+[INFO ] 2021-10-29 16:06:45.974 [main] [com.dmall.admiral.client.ContextRegistry] [] -
+                ##### Application [mid-cloud-test-admiral]'s context has been registered successfully.
+[INFO ] 2021-10-29 16:06:46.125 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                ##### Admiral client version: 3.1.2
+[INFO ] 2021-10-29 16:06:46.125 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                Current launching mode : remote
+[INFO ] 2021-10-29 16:06:46.438 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                Admiral Server Health check, ResponseMessage:{"admiral-server-env":"mid","health":"OK"}
+[INFO ] 2021-10-29 16:06:46.440 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                ##### The URL for getting server nodes : http://mid-admiral.server.api.dmall.com/get_server_nodes
+[INFO ] 2021-10-29 16:06:46.480 [main] [com.dmall.admiral.client.config.prop.AdmiralPropertyHolder] [] -
+                Start to load properties from remote server
+[INFO ] 2021-10-29 16:06:46.483 [main] [com.dmall.admiral.client.net.AdmiralClientInstanceId] [] -
+                ##### Admiral client instanceID: 10.12.205.132:3274520
+[INFO ] 2021-10-29 16:06:46.483 [main] [com.dmall.admiral.client.net.http.AdmiralHttpClient] [] -
+                ##### URL for getting initialized configuration : http://mid-admiral.server.api.dmall.com/get_config
+[INFO ] 2021-10-29 16:06:46.765 [main] [com.dmall.admiral.client.config.prop.LocalPropertyHolder] [] -
+                ##### Loading properties local.properties ...
+[ERROR] 2021-10-29 16:06:46.767 [main] [com.dmall.admiral.client.config.prop.LocalPropertyHolder] [] -
+                Even through you specified this file [local.properties], we can not load this file, ignore it pls.
+java.lang.NullPointerException: null
+	at com.dmall.admiral.client.config.prop.LocalPropertyHolder.loadFromLocal(LocalPropertyHolder.java:97)
+	at com.dmall.admiral.client.AdmiralClientContext.init(AdmiralClientContext.java:184)
+	at com.dmall.admiral.client.AdmiralClientContext$Builder.startUp(AdmiralClientContext.java:612)
+	at DistributedIdTest.main(DistributedIdTest.java:152)
+[INFO ] 2021-10-29 16:06:46.767 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                Load properties from local file, and the successful of loading result is true 
+[INFO ] 2021-10-29 16:06:46.768 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                All Loading Remote Properties Are Here:
+ Dynamic Properties: 
+{
+	"__global_admira_test":"__global_admira_test_001065",
+	"__infra.zone.vendorId.mapping":"{\"1\":\"gz01\"}",
+	"app_dynamic_key":"app_dynamic_keyvalue_001008",
+	"dmg.influxdb.url":"http://10.40.34.13:8086",
+	"influxdb.logDb.pwd":"!QAZxsw2",
+	"local_dynamic_pro":"app-local_dynamic_pro-value",
+	"sysy_dydy_dy01":"sysy_dydy_dy"
+},
+Static Properties: 
+{
+	"__erp.cookie.aes.key":"Adv3fRg7JhKh3d0A",
+	"__erp.domain.name":"miderp.dmall.com.cn",
+	"__infra.ddc.server.addr":"midamp.ddc.dmall.com",
+	"__infra.dmc.server.addr":"http://midds.dmc.api.inner-dmall.com/",
+	"__infra.dmg.server.addr":"midamp.dmg.dmall.com:8018",
+	"__infra.dsf.add":"zookeeper://10.248.224.136:2181",
+	"__infra.dsf.config.addr":"zookeeper://midzk1.dmall.com:2181?backup=midzk2.dmall.com:2181",
+	"__infra.dsf.meta.addr":"zookeeper://midzk1.dmall.com:2181?backup=midzk2.dmall.com:2181",
+	"__infra.dsf.registry.addr":"zookeeper://midzk1.dmall.com:2181?backup=midzk2.dmall.com:2181",
+	"__infra.dsf.zookeeper.addr":"midzk1.dmall.com:2181",
+	"__infra.pulsar.zone.id":"{\"gz01\":1,\"rz01\":2,\"rz02\":3,\"version\":1}",
+	"__infra.zone.vendorId.mappingxx":"111",
+	"__mid.app.code":"admiral-test",
+	"__mid.app.secret.key":"BFA88CD8-1BDC-4A11-8E8A-161E121F2477",
+	"__mid.project.code":"mid-cloud-test",
+	"__sso.common.secret.key":"8d623ea4b041072f98e9c17b6ae2158e",
+	"__sso.cookie.domain":"dmall.com",
+	"__sso.cookie.name":"__token_",
+	"__sso.origin.reg":".*\\.dmall\\.com",
+	"__sso.partner.public.key":"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCNGdSNUj5oX0GF6XSpsbqTZrC9vyGrNf8lDO0pHPNhSLchztb5qRH6x6k3cZgy9q3lD8DzWqz8ynlzLB1VdCB/XKocCVxTNew4wuEoY0Fs0W1glOyWVHA9he28CRGS/5OrJjNRdyYuLuA4X+4UMtP4TyWQydOa31N6Tnmi4vQ46wIDAQAB",
+	"__sso.server.domain":"midmansso.dmall.com",
+	"__sso.sign.key":"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJQ+GEKFq8gjKI+hdifKoAe5Dhtkfjoqe/9nkbdcvpRwuXbnPJGiJqoTRGCB5ypDpM4+Z0E4bjedrN/o7s00KZB2/YWepDMufDQeZ9RK9Q71RJLkSwZWZ5fbMH+/dKsrXbMCwEtsg9EKhmKe/6jSkYEeeBJO/jaFjedhbyB9e9qwIDAQAB",
+	"__sso.vender.cookie.name":"mid_dmall_vender",
+	"db.jdbc.pulsar":"[\n  {\n    \"db_name\": \"BpIdTest\",\n    \"inject_tables\": \".*\",\n    \"inject_ids\": {\n      \"dis_id_table\": \"id\"\n    }\n  },\n  {\n    \"db_name\": \"BpTestDb\",\n    \"inject_tables\": \".*\",\n    \"inject_ids\": {\n      \"dis_id_table\": \"id\"\n    }\n  }\n]",
+	"kgkkk":"",
+	"local_pro":"app-local_pro-vlaue",
+	"nnnn":"kkkkkk  ",
+	"static_username":"app-static_username-value",
+	"sy-dy-dy":"sy-dy-dy",
+	"sysy_dy":"kkkdy",
+	"sysy_dydy_dy":"test01",
+	"sysysysysysy":"sysysysysysy"
+}
+[INFO ] 2021-10-29 16:06:46.790 [main] [com.dmall.admiral.client.net.netty.ConnectionManager] [] -
+                The options of admiral client bootstrap : {connectTimeoutMillis=10000, connectionTimeoutMillis=10000, keepAlive=true}
+[INFO ] 2021-10-29 16:06:46.791 [Admiral connected watcher] [com.dmall.admiral.client.AdmiralClientContext$WatchConnectedTask] [] -
+                Admiral client mid-cloud-test-admiral watch connected Task com.dmall.admiral.client.AdmiralClientContext$WatchConnectedTask@63e1ac9 start
+[INFO ] 2021-10-29 16:06:46.791 [Admiral connected watcher] [com.dmall.admiral.client.net.netty.ConnectionManager] [] -
+                Start to connect admiral server for app [mid-cloud-test-admiral]
+[INFO ] 2021-10-29 16:06:46.791 [Admiral connected watcher] [com.dmall.admiral.client.net.netty.ConnectionManager] [] -
+                Selected admiral server is /10.248.225.19:9527, ready to connect it.
+[INFO ] 2021-10-29 16:06:46.792 [main] [com.dmall.admiral.client.config.manage.GlobalObjectManagerRefs] [] -
+                Start to add a weak reference of object manager [managedObjectsMap={}] into the global reference.
+[INFO ] 2021-10-29 16:06:46.793 [main] [com.dmall.admiral.client.config.manage.GlobalObjectManagerRefs] [] -
+                Add a weak reference of [managedObjectsMap={}] into the global reference sucessfully.
+[INFO ] 2021-10-29 16:06:46.794 [main] [com.dmall.admiral.client.buildin.BuildinResourceManager] [] -
+                Intialized build-in resources manager.
+[INFO ] 2021-10-29 16:06:46.794 [main] [com.dmall.admiral.client.AdmiralClientContext] [] -
+                ##### Admiral client context 10.12.205.132:3274520mid-cloud-test-admiral has been initialized. AdmiralClientContext [appName=mid-cloud-test-admiral, group=null, isInitialized=true, isClosed=false, launchMode=REMOTE, disableDynamicPush=false]
+[INFO ] 2021-10-29 16:06:46.855 [New I/O client worker #1-1] [com.dmall.admiral.client.net.netty.ConnectionManager$2] [] -
+                Connect admiral server successfully, channel is [id: 0x291373d5, /10.12.205.132:52981 => /10.248.225.19:9527]
+[INFO ] 2021-10-29 16:06:46.855 [New I/O client worker #1-1] [com.dmall.admiral.client.net.netty.ConnectionManager] [] -
+                Connected with channel: [id: 0x291373d5, /10.12.205.132:52981 => /10.248.225.19:9527]
+[INFO ] 2021-10-29 16:06:46.909 [New I/O client worker #1-1] [com.dmall.admiral.client.config.AdmiralConfigHandler] [] -
+                Received message from server: AdmiralMessage [header=Header [ clientId=null, requestId=35644b7e-ff30-4f77-aa40-8670afb3bdf8, params={}], body="register to server success!", code=200, messageType=REQUEST_RESPONSE]
+[INFO ] 2021-10-29 16:06:46.910 [New I/O client worker #1-1] [com.dmall.admiral.client.net.netty.ConnectionManager] [] -
+                Start adding a idle timer
+[INFO ] 2021-10-29 16:07:06.795 [Admiral connected watcher] [com.dmall.admiral.client.AdmiralClientContext$WatchConnectedTask] [] -
+                Admiral client mid-cloud-test-admiral watch connected Task com.dmall.admiral.client.AdmiralClientContext$WatchConnectedTask@63e1ac9 start
